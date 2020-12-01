@@ -1,0 +1,40 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+header > div {
+    float: left;
+}
+main {
+    clear: both;
+}
+
+#baner1, #baner2 {
+    background-color: #3cb371;
+    color: white;
+    height: 100px;
+    width: 40%;
+}
+#baner3 {
+    background-color: #3cb371;
+    height: 100px;
+    width: 20%;
+}
+main > div {
+    background-color: #ffdab9;
+    width: 170px;
+    height: 90px;
+    margin: 5px;
+    border: 1px solid #3cb371;
+    float: left;
+}
+footer {
+    background-color: #3cb371;
+    color: white;
+    clear: both;
+}
+h6 {    
+    text-align: right;
+}
+form {
+    padding: 30px;
+}

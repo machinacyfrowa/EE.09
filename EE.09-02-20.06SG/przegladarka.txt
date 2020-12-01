@@ -1,0 +1,3 @@
+Brave
+
+Wersja 1.17.73 Chromium: 87.0.4280.67 (Oficjalna wersja) (64-bitowa)

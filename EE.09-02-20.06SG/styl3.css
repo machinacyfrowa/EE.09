@@ -1,0 +1,39 @@
+body {
+    font-family: Verdana, sans-serif;
+}
+header, footer {
+    background-color: rgb(205, 92, 92);
+    color: white;
+    text-align: center;
+    padding:5px;
+}
+div#prawy, div#lewy {
+    background-color: rgb(250, 235, 215);
+    width: 25%;
+    height: 500px;
+    float: left;
+}
+div#srodkowy {
+    background-color: rgb(250, 235, 215);
+    width: 50%;
+    height: 500px;
+    float: left;
+}
+div#dane {
+    background-color: rgb(210, 180, 140);
+    color: white;
+    clear: both;
+}
+h2 {
+    text-align: center;
+}
+h2::first-letter {
+    font-size: 150%;
+}
+img {
+    height: 100px;
+    padding: 7px;
+}
+img:hover {
+    background-color: rgb(210, 180, 140);
+}
