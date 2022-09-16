@@ -1,0 +1,4 @@
+1. INSERT INTO `karty_wedkarskie` (`id`, `imie`, `nazwisko`, `adres`, `data_zezwolenia`, `punkty`) VALUES (NULL, 'Grzegorz', 'Niemczyk', 'Gdynia, Batorego 14/5', '2018-02-23', '0');
+2. SELECT imie, nazwisko FROM `karty_wedkarskie` WHERE punkty > 20;
+3. SELECT akwen FROM `lowisko` LEFT JOIN zawody_wedkarskie ON lowisko.id = zawody_wedkarskie.Lowisko_id WHERE zawody_wedkarskie.sedzia = "Krzysztof Dobrowolski";
+4. CREATE USER 'anna'@'localhost' IDENTIFIED VIA mysql_native_password USING '***';GRANT USAGE ON *.* TO 'anna'@'localhost' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
