@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zespoły ratownicze</title>
+    <link rel="stylesheet" href="styl3.css">
+</head>
+<body>
+    <header>
+        <div class="lewy">
+            <h2>Dodanie zespołu ratowniczego</h2>
+        </div>
+        <div class="srodek">
+            <p>Kontakt: <br> 022 222 11 333</p>
+        </div>
+        <div class="prawy">
+            <img src="obraz.jpg" alt="Ratownicy">
+        </div>
+    </header>
+    <main>
+        <h3>Dodaj nowy zespół</h3>
+        <form action="dodanie.php" method="post">
+            <label for="nrKaretki">Numer karetki:</label><br>
+            <input type="number" name="nrKaretki" id="nrKaretki"><br>
+            <label for="ratownik1">Imię i nazwisko pierwszego 
+                ratownika:</label><br>
+            <input type="text" name="ratownik1" id="ratownik1"><br>
+            <label for="ratownik2">Imię i nazwisko drugiego 
+                ratownika</label><br>
+            <input type="text" name="ratownik2" id="ratownik2"><br>
+            <label for="ratownik3">Imię i nazwisko trzeciego 
+                ratownika</label><br>
+            <input type="text" name="ratownik3" id="ratownik3"><br>
+            <input type="reset" value="CZYŚĆ">
+            <input type="submit" value="DODAJ">
+        </form>
+    </main>
+    <footer>
+        <div class="lewy">
+            <a href="kwerendy.txt">Zobacz kwerendy</a>
+        </div>
+        <div class="srodek">
+            <h5>Przypominamy numery alarmowe</h5>
+            <ol>
+                <li>112</li>
+                <li>999</li>
+            </ol>
+        </div>
+        <div class="prawy">
+            <p>Autor <br> 00000000000</p>
+        </div>
+    </footer>
+</body>
+</html>
