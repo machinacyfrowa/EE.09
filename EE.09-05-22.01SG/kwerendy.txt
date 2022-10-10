@@ -1,0 +1,4 @@
+1. SELECT haslo FROM `uzytkownicy` where login = "Justyna";
+2. SELECT count(*) FROM `dane`;
+3. SELECT uzytkownicy.login, dane.rok_urodz, dane.przyjaciol, dane.hobby, dane.zdjecie FROM `uzytkownicy` LEFT JOIN dane ON uzytkownicy.id = dane.id WHERE login="Justyna";
+4. ALTER TABLE `dane` ADD `stanowisko` TEXT NOT NULL AFTER `zdjecie`;
