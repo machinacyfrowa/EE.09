@@ -1,0 +1,6 @@
+1. SELECT materialy.nazwa, materialy.ilosc, producenci.nazwaProd FROM `materialy`, `producenci` WHERE materialy.ilosc > 9 AND materialy.Producenci_id = Producenci.id;
+2. SELECT materialy.nazwa, producenci.nazwaProd, jednostki.nazwaJedn FROM `materialy`
+    LEFT JOIN producenci on materialy.Producenci_id = producenci.id
+    LEFT JOIN jednostki on materialy.Jednostki_id = jednostki.id;
+3. CREATE USER 'zaopatrzenie'@'localhost' IDENTIFIED VIA mysql_native_password USING '***';GRANT USAGE ON *.* TO 'zaopatrzenie'@'localhost' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+4. GRANT SELECT, INSERT, UPDATE, DELETE ON  `firma`.* TO 'zaopatrzenie'@'localhost';

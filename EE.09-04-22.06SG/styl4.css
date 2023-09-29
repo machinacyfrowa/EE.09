@@ -1,0 +1,48 @@
+* {
+    font-family: Verdana, sans-serif;
+    text-align: center;
+}
+header {
+    background-color: darkgreen;
+    color: white;
+    padding: 5px;
+}
+main {
+    display: flex;
+    background-color: palegreen;
+}
+div#left{
+    background-color: palegreen;
+    width: 30%;
+    height: 500px;
+}
+div#right {
+    background-color: honeydew;
+    width: 70%;
+    height: 500px;
+    padding-top: 100px;
+}
+footer {
+    background-color: palegreen;
+    padding: 3px;
+}
+table, td {
+    border: 1px solid darkgreen;
+    border-collapse: collapse;
+}
+table {
+    margin: auto;
+    width: 95%;
+}
+td, th {
+    padding: 20px 0;
+}
+button {
+    background-color: darkgreen;
+    color: white;
+    padding: 5px;
+}
+button:hover {
+    background-color: honeydew;
+    color: darkgreen;
+}

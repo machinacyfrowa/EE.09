@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamówienia hurtowe</title>
+    <link rel="stylesheet" href="styl4.css">
+</head>
+<body>
+    <header>
+        <h1>Sieci komputerowe</h1>
+    </header>
+    <main>
+        <div id="left">
+            <h2>Aktualizacja i zamówienia materiałów</h2>
+            <p>Do wewnętrznego użytku firmy</p>
+            <img src="obraz.png" alt="sieć komputerowa">
+        </div>
+        <div id="right">
+            <table>
+                <tr>
+                    <th>Produkt</th>
+                    <th>Jednostka</th>
+                    <th>Dostępna ilość</th>
+                    <th>Aktualizacja</th>
+                    <th>Zamówienie</th>
+                </tr>
+                <tr id="row2">
+                    <td>Skrętka U/UTP drut</td>
+                    <td>metr</td>
+                    <td class="count">20</td>
+                    <td><button onclick="update(2)">Aktualizuj</button></td>
+                    <td><button onclick="order(2)">Zamów</button></td>
+                </tr>
+                <tr id="row3">
+                    <td>Skrętka U/UTP linka</td>
+                    <td>metr</td>
+                    <td class="count">2</td>
+                    <td><button onclick="update(3)">Aktualizuj</button></td>
+                    <td><button onclick="order(3)">Zamów</button></td>
+                </tr>
+                <tr id="row4">
+                    <td>Wtyki 8P8C</td>
+                    <td>sztuki</td>
+                    <td class="count">10</td>
+                    <td><button onclick="update(4)">Aktualizuj</button></td>
+                    <td><button onclick="order(4)">Zamów</button></td>
+                </tr>
+                <tr id="row5">
+                    <td>Moduły keystone</td>
+                    <td>sztuki</td>
+                    <td class="count">30</td>
+                    <!-- trzeci sposób -->
+                    <td><button onclick="update(5)">Aktualizuj</button></td>
+                    <td><button onclick="order(5)">Zamów</button></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <a href="http://sieci.pl/" target="_blank">Nasza strona internetowa</a>
+        <p>Stronę przygotował: 00000000000</p>
+    </footer>
+    <script>
+        function update(index) {
+            let newCount = window.prompt("Podaj nową ilość:");
+            let id = "row"+ index;
+            let tr = document.getElementById(id);
+            let td = tr.getElementsByClassName("count")[0];
+            td.innerHTML = newCount;
+            highlight();
+        }
+        function order(index) {
+            let id = "row"+ index;
+            let tr = document.getElementById(id);
+            let td = tr.getElementsByTagName('td')[0];
+            let productName = td.innerHTML;
+            window.alert("Zamówienie nr: "+order_id+" Produkt: "+productName);
+        }
+        function highlight() {
+            let elements = document.querySelectorAll('td.count');
+            for(let i = 0; i < elements.length; i++) {
+                let count = elements[i].innerHTML;
+                if(count == 0) {
+                    elements[i].style.backgroundColor = 'red';
+                }
+                if(count >= 1 && count <= 5) {
+                    elements[i].style.backgroundColor = 'yellow';
+                }
+                if(count > 5) {
+                    elements[i].style.backgroundColor = 'Honeydew'
+                }
+            }
+        }
+        
+        
+        //po szkolnemu
+        let order_id = 0
+        highlight();
+    </script>
+</body>
+</html>
