@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="styl7.css">
+</head>
+<body>
+    <header>
+        <h2>Galeria miejsc ciekawych</h2>
+    </header>
+    <main>
+        <div id="picture">
+            <img src="lanzarotte.jpg" alt="galeria" id="largeImage">
+        </div>
+        <div id="flex">
+            <div id="left">
+                <h3>Przeglądaj zdjęcia</h3>
+                <img src="lanzarotte.jpg" alt="lanzarotte" onclick="image('lanzarotte.jpg')">
+                <img src="pekin.jpg" alt="pekin" onclick="image('pekin.jpg')">
+                <img src="serengeti.jpg" alt="serengeti" onclick="image('serengeti.jpg')">
+                <img src="wenecja.jpg" alt="wenecja" onclick="image('wenecja.jpg')">
+                <img src="tajlandia.jpg" alt="tajlandia" onclick="image('tajlandia.jpg')">
+            </div>
+            <div id="right">
+                <h3>Obrazy w naszej galerii</h3>
+                <table>
+                    <tr>
+                        <td>Europa</td>
+                        <td>Azja</td>
+                        <td>Afryka</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+                <p>Polub nas<img id="likeIcon" src="icon-off.png" onclick="icon()"></p>
+                
+                <a href="https://pixabay.com" target="_blank">Odkryj więcej zdjęć</a>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        Autor: 00000000000
+    </footer>
+    <script>
+        function icon() {
+            let iconSrc = document.getElementById('likeIcon').getAttribute("src");
+            console.log(iconSrc);
+            if(iconSrc == "icon-off.png")
+                document.getElementById('likeIcon').setAttribute("src","icon-on.png");
+            else
+                document.getElementById('likeIcon').setAttribute("src","icon-off.png");
+        }
+        function image(url){
+            document.getElementById('largeImage').setAttribute("src", url);
+        }
+    </script>
+</body>
+</html>

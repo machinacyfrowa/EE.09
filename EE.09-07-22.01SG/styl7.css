@@ -1,0 +1,44 @@
+body {
+    font-family: Helvetica, sans-serif;
+}
+header,
+footer {
+    background-color: rgb(70,130,180);
+    color: white;
+    height: 30px;
+    text-align: center;
+}
+main {
+    background-color: rgb(176,196,222);
+    
+}
+div#picture {
+    padding: 50px;
+    text-align: center;
+}
+div#flex {
+    display: flex;
+}
+div#left {
+    background-color: rgb(70,130,180);
+    color: white;
+    height: 300px;
+    width: 80%;
+}
+div#right {
+    background-color: rgb(70,130,180);
+    color: white;
+    height: 300px;
+    width: 20%;
+}
+main div#picture img {
+    padding: 3px;
+    border: 1px dashed blue;
+    border-radius: 10px;
+}
+div#left img{
+    height: 40%;
+}
+div#left img:hover {
+    border: 1px solid white;
+}
