@@ -1,0 +1,46 @@
+body {
+    font-family: Georgia, serif;
+}
+main {
+    display: flex;
+}
+div#left {
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    width: 30%;
+}
+div#right {
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    width: 70%;
+    overflow: auto;
+}
+footer {
+    background-color: dimgray;
+    color: white;
+}
+div#right img,
+div#right ul {
+    float: left;
+}
+div#right p {
+    clear:both;
+}
+p {
+    padding: 10px;
+}
+img {
+    padding: 10px;
+    border: 1px solid white;
+}
+#indigoButton {
+    background-color: indigo;
+}
+#steelButton {
+    background-color: steelblue;
+}
+#oliveButton {
+    background-color: olive;
+}

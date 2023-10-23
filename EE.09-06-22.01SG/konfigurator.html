@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style w JavaScript</title>
+    <link rel="stylesheet" href="styl6.css">
+</head>
+<body>
+   <main>
+    <div id="left">
+        <h1>Konfigurator stylu</h1>
+        <p>Podaj kolor tła</p>
+        <input type="button" value="Indigo" id="indigoButton" onclick="backgroundColor('indigo')">
+        <input type="button" value="SteelBlue" id="steelButton" onclick="backgroundColor('steelblue')">
+        <input type="button" value="Olive" id="oliveButton" onclick="backgroundColor('olive')">
+        <p>Podaj kolor czcionki</p>
+        <select onchange="fontColor()" id="fontColor">
+            <option value="white">White</option>
+            <option value="tan">Tan</option>
+            <option value="bisque">Bisque</option>
+            <option value="plum">Plum</option>
+        </select>
+        <p>Podaj rozmiar czcionki w procentach, np. 200%</p>
+        <input type="text" value="100%" id="fontSize" onblur="fontSize()">
+        <p>Czy rysunek ma mieć ramkę</p>
+        <input type="checkbox" checked id="imageBorder" onclick="imageBorder()">Rysuj ramkę
+        <p>Jaki jest typ punktora listy</p>
+        <input onclick="listStyle()" type="radio" name="shape" id="disc" checked>dysk
+        <input onclick="listStyle()" type="radio" name="shape" id="square">kwadrat
+        <input onclick="listStyle()" type="radio" name="shape" id="circle">okrąg
+    </div>
+    <div id="right">
+        <img src="gibraltar.jpg" alt="półwysep Gibraltar">
+        <ul>
+            <li>element 1</li>
+            <li>element 2</li>
+            <li>element 3</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+    </div>
+   </main>
+   <footer>
+    Autor: 00000000000
+   </footer>
+   <script>
+    function backgroundColor(color) {
+        document.getElementById("right").style.backgroundColor = color;
+    }
+    function fontColor() {
+        console.log("Zmieniam kolor czcionki...");
+        let color = document.getElementById("fontColor").value;
+        document.getElementById("right").style.color = color;
+    }
+    function fontSize() {
+        document.getElementById("right").style.fontSize = document.getElementById("fontSize").value;
+    }
+    function imageBorder() {
+        if(document.getElementById("imageBorder").checked) {
+            document.querySelector("#right img").style.border = "1px solid white";
+        } else {
+            document.querySelector("#right img").style.border = "none";
+        }
+    }
+    function listStyle() {
+        if(document.getElementById("disc").checked)
+            document.querySelector("#right ul").style.listStyle = "disc";
+        if(document.getElementById("square").checked)
+            document.querySelector("#right ul").style.listStyle = "square";
+        if(document.getElementById("circle").checked)
+            document.querySelector("#right ul").style.listStyle = "circle";
+    }
+   </script>
+</body>
+</html>
